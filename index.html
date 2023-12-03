@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COTIZACIONES Y PROMOCIONES MOTOS HONDA</title>
+  <style>
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      background-image: url('C:\\Users\\JOSWII\\Desktop\\PROYECTO CALCULO\\eric-michael-KA9W4k0pOn4-unsplash.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    #header {
+      font-size: 1em;
+      display
+      : flex;
+      align-items: center;
+      padding: 20px;
+      
+    }
+    
+
+    h1 {
+        font-size: 3.5em;
+  color: #1b1a1a;
+  margin: 0;
+  
+  animation: moveTitle 8s infinite;
+  background: linear-gradient(to right, rgb(14, 162, 199), rgb(246, 246, 246));
+      color: transparent;
+      -webkit-background-clip: text; 
+      background-clip: text; 
+ 
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(105, 84, 84, 0.5);
+      
+    }
+    p {
+       font-size: 0,1em; 
+       color: rgb(201, 8, 8)
+       font-style: italic; 
+       font-weight: bold; 
+      
+    }
+    t {
+      font-size: 1.1em; 
+      color: rgb(255, 254, 255); 
+      font-style: italic; 
+      font-weight: bold; 
+      animation: moveText 4s infinite;
+      
+      
+    }
+    d {
+  color: #00ffee; /* Cambia "#ff0000" al código de color que desees */
+  font-style: italic;
+}
+    @keyframes moveTitle {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(30px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+    @keyframes moveText {
+      0% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(10px);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+    @keyframes moveLogo {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#galeria {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .imagen {
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .imagen img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    #cotizaciones-container {
+      font-size: 1.4em;
+  display: flex;
+  flex-direction: column; /* Alinea las cotizaciones verticalmente */
+  align-items: center; /* Centra las cotizaciones horizontalmente */
+  max-width: 1000px;
+  margin: auto;
+
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: rgba(8, 229, 249, 0.3);
+}
+
+    .cotizacion {
+      margin-bottom: 15px;
+      padding: 15px;
+      border: 1px solid #bdc3c7;
+      border-radius: 10px;
+      background-color: #ecf0f1;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+
+    .cotizacion:hover {
+      background-color: #d5dbdb;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .left-column,
+    .right-column {
+      width: calc(45% - 10px);
+      margin: 0 10px 20px 0;
+    }
+
+    label {
+  display: block;
+  margin-bottom: 10px;
+  color: rgb(9, 1, 18);
+  -webkit-text-stroke: 2px rgb(181, 243, 12);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+    input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: transparent; 
+  color: white; 
+  font-weight: bold; 
+  font-size: 1.2em; 
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5); 
+}
+
+input:focus {
+  background-color: white; 
+  color: black; 
+}
+
+    button {
+      padding: 15px;
+      margin: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s ease, opacity 0.3s ease;
+      margin-top: 1.5cm;
+    }
+
+    button:hover {
+      background-color: rgba(52, 152, 219, 0.9);
+      opacity: 0.9;
+    }
+
+    button.secondary {
+      background-color: rgba(52, 152, 219, 0.7);
+      color: #fff;
+      opacity: 0.9;
+    }
+
+    button.secondary:hover {
+      background-color: rgba(41, 128, 185, 0.9);
+      opacity: 0.9;
+    }
+
+    .catalogo-btn {
+      margin-top: 20px;
+      margin-top: 1.5cm;
+    }
+
+    #logo {
+      width: 150px;
+      height: auto;
+      margin-right: 20px;
+      animation: moveLogo 5s linear infinite;
+    }
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../image/fondo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 330vh;
+}
+
+h2{
+    text-align: center;
+    font-size: 40px;
+    font-family: arial;
+    margin-top: 80px;
+    color: aqua;
+    text-shadow: 0px 0px 6px black;
+}
+
+.content-all{
+    width: 210px;
+    margin: auto;
+    perspective: 800px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.content-carrousel{
+    width: 100%;
+    position: absolute;
+    margin-left: -2cm;
+    animation: rotar 10s infinite linear;
+    transform-style: preserve-3d;
+}
+
+.content-carrousel:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+
+.content-carrousel figure{
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px black;
+    transition: all 300ms;
+    
+}
+
+.content-carrousel figure:hover{
+    box-shadow: 0px 0px 0px 0px black;
+    transition: all 300ms;
+}
+
+.content-carrousel figure:nth-child(1){transform: rotateY(0deg) translateZ(300px);}
+.content-carrousel figure:nth-child(2){transform: rotateY(40deg) translateZ(300px);}
+.content-carrousel figure:nth-child(3){transform: rotateY(80deg) translateZ(300px);}
+.content-carrousel figure:nth-child(4){transform: rotateY(120deg) translateZ(300px);}
+.content-carrousel figure:nth-child(5){transform: rotateY(160deg) translateZ(300px);}
+.content-carrousel figure:nth-child(6){transform: rotateY(200deg) translateZ(300px);}
+.content-carrousel figure:nth-child(7){transform: rotateY(240deg) translateZ(300px);}
+.content-carrousel figure:nth-child(8){transform: rotateY(280deg) translateZ(300px);}
+.content-carrousel figure:nth-child(9){transform: rotateY(320deg) translateZ(300px);}
+.content-carrousel figure:nth-child(10){transform: rotateY(360deg) translateZ(300px);}
+
+.content-carrousel img{
+    width: 100%;
+    transition: all 300ms;
+}
+
+.content-carrousel img:hover{
+    transform: scale(1.2);
+    transition: all 300ms;
+}
+
+
+@keyframes rotar{
+    from{
+        transform: rotateY(0deg);
+    }to{
+        transform: rotateY(360deg);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+  background-image: url("image/22.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    font-family: arial;
+    margin-top: 80px;
+    color: rgb(11, 247, 161);
+    text-shadow: 0px 0px 6px black;
+}
+
+.content-all {
+    width: 210px;
+    margin: auto;
+    perspective: 800px;
+    position: relative;
+    margin-top: 50px;
+    z-index: 1; 
+}
+
+.content-carrousel {
+    width: 100%;
+    position: absolute;
+    animation: rotar 10s infinite linear;
+    transform-style: preserve-3d;
+}
+
+.content-carrousel:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+    z-index: 2; 
+}
+
+
+
+
+#imagenEsquina {
+      display: none; 
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100px; 
+      height: auto; 
+    }
+
+
+
+
+
+
+  </style>
+</head>
+
+<body>
+  <div id="cotizaciones-container"></div>
+
+  <div id="header">
+    <img id="logo" src="image/pngegg (45).png" alt="Honda Logo">
+    
+
+    <h1>COTIZACIONES Y PROMOCIONES MOTOS HONDA</h1>
+    <p></p>
+    <i></i>
+    <t>Calculo Presicion Y Simetria... Adelante Ingenieria</t>
+    <f>-</f>
+        <d>Docente Msc. Eduardo Zubieta C</d>
+  </div>
+  
+  <div id="imagenEsquinaContainer">
+    <img id="imagenEsquina" src="image/43.png" alt="Imagen en la esquina inferior izquierda">
+  <form id="cotizacion-form">
+    <div class="left-column">
+      <label for="nombre">Nombre del Cliente:</label>
+      <input type="text" id="nombre" required>
+
+      <label for="email">Email del Cliente:</label>
+      <input type="email" id="email" required>
+
+      <label for="modelo">Modelo de Moto:</label>
+      <input type="text" id="modelo" required>
+
+      <label for="marca">Marca de Moto:</label>
+      <input type="text" id="marca" required>
+
+      <label for="año">Año de la Moto:</label>
+      <input type="number" id="año" required>
+    </div>
+
+    <div class="right-column">
+      <label for="precio">Precio de la Moto:</label>
+      <input type="number" id="precio" required>
+
+      <div class="right-column">
+  <label for="tipo">Tipo de Moto:</label>
+  <select id="tipo" required style="width: calc(100% - 20px); padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 5px; background: linear-gradient(to right, rgba(133, 152, 183, 0.7), rgba(8, 141, 185, 0.7)); color: white; font-weight: bold; font-size: 1.2em;">
+    <option value="Deportiva">Deportiva</option>
+    <option value="Normal">Normal</option>
+    <option value="Medio Uso">Medio Uso</option>
+  </select>
+
+  <label for="cantidad">Cantidad:</label>
+  <input type="number" id="cantidad" required>
+</div>
+</head>
+<body>
+    <h2>PROMOCIONES POR NAVIDAD</h2>
+    <div class="content-all">
+        <div class="content-carrousel">
+            <figure><img src="image/img1.jpg"></figure>
+            <figure><img src="image/img2.jpg"></figure>
+            <figure><img src="image/img3.jpg"></figure>
+            <figure><img src="image/img4.jpg"></figure>
+            <figure><img src="image/img5.jpg"></figure>
+            <figure><img src="image/img6.jpg"></figure>
+            <figure><img src="image/img7.jpg"></figure>
+            <figure><img src="image/img8.jpg"></figure>
+            <figure><img src="image/img9.jpg"></figure>
+            <figure><img src="image/img10.jpg"></figure>
+        </div>
+        <button id="botonDetener">l</button>
+    </div>
+
+      
+    </div>
+
+    <button type="button" onclick="agregarCotizacion()">Agregar Cotización</button>
+    <img src="C:\Users\JOSWII\Desktop\PROYECTO CALCULO\43.png" alt="Imagen" class="moveTitle moveText" style="position: absolute; top: -20px; right: -20px; width: 30px; height: 30px;">
+  </button>
+  
+    <button type="button" onclick="limpiarFormulario()" class="secondary">Limpiar Formulario</button>
+    <button type="button" onclick="guardarCotizacion()" class="secondary">Guardar Cotización</button>
+    <button type="button" onclick="nuevaCotizacion()" class="secondary">Nueva Cotización</button>
+    <button type="button" onclick="verCatalogo()" class="secondary catalogo-btn">Catálogo</button>
+    <button type="button" onclick="salir()" class="secondary">Salir</button>
+    <button type="button" onclick="actualizarPagina()" onmouseover="cambiarColor(this)" onmouseout="restaurarColor(this)" style="position: absolute; top: 20px; left: 10px; z-index: 999; background: transparent; color: black; font-weight: bold; font-style: italic; padding: 10px; border: none; transition: background 0.3s ease; cursor: pointer;">Recargar</button>
+
+
+  </form>
+
+  <script>
+       class Moto {
+      constructor(modelo, marca, año, precio, tipo) {
+        this.modelo = modelo;
+        this.marca = marca;
+        this.año = año;
+        this.precio = precio;
+        this.tipo = tipo;
+      }
+    }
+
+    class Cliente {
+      constructor(nombre, email) {
+        this.nombre = nombre;
+        this.email = email;
+      }
+    }
+
+    class Cotizacion {
+      constructor(cliente, moto, cantidad) {
+        this.cliente = cliente;
+        this.moto = moto;
+        this.cantidad = cantidad;
+      }
+
+      calcularTotal() {
+        let total = this.moto.precio * this.cantidad;
+        let descuento = 0;
+        let descuentoPorcentaje = 0;
+
+        if (this.moto.tipo === "Deportiva") {
+          descuento = total * 0.20;
+          total -= descuento;
+          descuentoPorcentaje = 20;
+        } else if (this.moto.tipo === "Normal") {
+          descuento = total * 0.10;
+          total -= descuento;
+          descuentoPorcentaje = 10;
+        }
+
+        return { total, descuento, descuentoPorcentaje };
+      }
+
+      agregarRegalos() {
+        let regalos = [];
+
+        if (this.moto.tipo === "Deportiva") {
+          regalos.push("Casco");
+        } else if (this.moto.tipo === "Normal") {
+          regalos.push("Guantes");
+        }
+
+        return regalos;
+      }
+    }
+
+    class CotizacionUI {
+      static mostrarCotizacion(cotizacion, resultado) {
+        const cotizacionesContainer = document.getElementById('cotizaciones-container');
+
+        const cotizacionDiv = document.createElement('div');
+        cotizacionDiv.classList.add('cotizacion');
+
+        cotizacionDiv.innerHTML = `
+          <p><strong>Cliente:</strong> ${cotizacion.cliente.nombre}</p>
+          <p><strong>Email:</strong> ${cotizacion.cliente.email}</p>
+          <p><strong>Moto:</strong> ${cotizacion.moto.modelo} ${cotizacion.moto.año}</p>
+
+          <p><strong>Tipo:</strong> ${cotizacion.moto.tipo}</p>
+          <p><strong>Cantidad:</strong> ${cotizacion.cantidad}</p>
+         
+          <p><strong>Descuento:</strong> $${resultado.descuento} (${resultado.descuentoPorcentaje}%)</p>
+          <p><strong>Total:</strong> $${resultado.total}</p>
+          <p><strong>Regalos:</strong> ${cotizacion.agregarRegalos().join(', ')}</p>
+
+        `;
+
+        cotizacionesContainer.appendChild(cotizacionDiv);
+      }
+    }
+
+    function agregarCotizacion() {
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const cliente = new Cliente(nombre, email);
+
+      const modelo = document.getElementById('modelo').value;
+      const marca = document.getElementById('marca').value;
+      const año = parseInt(document.getElementById('año').value);
+      const precio = parseFloat(document.getElementById('precio').value);
+      const tipo = document.getElementById('tipo').value;
+      const cantidad = parseInt(document.getElementById('cantidad').value);
+
+      const moto = new Moto(modelo, marca, año, precio, tipo);
+      const nuevaCotizacion = new Cotizacion(cliente, moto, cantidad);
+
+      const resultadoCotizacion = nuevaCotizacion.calcularTotal();
+
+      CotizacionUI.mostrarCotizacion(nuevaCotizacion, resultadoCotizacion);
+    }
+
+    function limpiarFormulario() {
+      const form = document.getElementById('cotizacion-form');
+      form.reset();
+    }
+
+    function guardarCotizacion() {
+     
+      alert('Cotización guardada');
+    }
+
+    function nuevaCotizacion() {
+      limpiarFormulario();
+    }
+
+    function verCatalogo() {
+      window.open('image/CATALOGO-HONDA-CENTER-SPORT (1).pdf', '_blank');
+
+    }
+
+    function salir() {
+     
+      alert('Saliendo de la aplicación');
+    }
+    function actualizarPagina() {
+    location.reload(); 
+  }
+
+  function cambiarColor(elemento) {
+    elemento.style.background = 'lightcyan';
+  }
+
+  function restaurarColor(elemento) {
+    elemento.style.background = 'transparent';
+  }
+  function salir() {
+    
+
+    
+    alert('INFINITE ITERATORS');
+  }
+
+  function cambiarColor(elemento) {
+    elemento.style.color = 'mediumvioletred';
+  }
+
+  function restaurarColor(elemento) {
+    elemento.style.color = 'darkmagenta';
+  }
+  const imagenEsquinaContainer = document.getElementById('imagenEsquinaContainer');
+    const imagenEsquina = document.getElementById('imagenEsquina');
+
+    // Mostrar la imagen cuando el mouse entra al contenedor
+    imagenEsquinaContainer.addEventListener('mouseenter', () => {
+      imagenEsquina.style.display = 'block';
+    });
+
+    // Ocultar la imagen cuando el mouse sale del contenedor
+    imagenEsquinaContainer.addEventListener('mouseleave', () => {
+      imagenEsquina.style.display = 'none';
+    });
+  </script>
+</body>
+
+</html>
